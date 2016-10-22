@@ -11,13 +11,15 @@ nav.main ul.main-nav {
 .panel.features .blocks .block {
 	padding: 25px;
 	height: auto;
-	border-left: 2px solid #dbdcdb;
-	-webkit-transition: border-left .2s ease;
-	transition: border-left .2s ease;
+	-webkit-transition: box-shadow .2s ease;
+	transition: box-shadow .2s ease;
+	will-change: box-shadow;
 }
 .panel.features .blocks .block .text {
 	padding: 0;
 	width: 80%;
+	-webkit-transition: -webkit-transform .2s ease;
+	transition: transform .2s ease;
 }
 .panel.features .blocks {
 	max-width: 800px;
@@ -71,7 +73,11 @@ footer.main {
 	color: #f4645f;
 }
 .panel.features .block-wrapper.hover .block {
-	border-left: 2px solid #f4645f;
+	box-shadow: 5px 0 0 #f4645f inset;
+}
+.panel.features .block-wrapper.hover .block .text {
+	-webkit-transform: translateX(5px);
+	transform: translateX(5px);
 }
 .panel.features .block-wrapper.hover .drag-handle:hover {
 	opacity: .9;
