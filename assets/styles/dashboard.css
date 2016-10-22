@@ -12,6 +12,7 @@ nav.main ul.main-nav {
 	padding: 25px;
 	height: auto;
 	border-left: 2px solid #dbdcdb;
+	-webkit-transition: border-left .2s ease;
 	transition: border-left .2s ease;
 }
 .panel.features .blocks .block .text {
@@ -56,11 +57,9 @@ footer.main {
 	opacity: .2;
 	padding: 10px 25px 10px 10px;
 	transition: opacity .2s ease;
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	cursor: move;
-}
-.drag-handle:hover {
-	opacity: .8;
 }
 .block-wrapper {
 	position: relative;
@@ -70,4 +69,7 @@ footer.main {
 }
 .use-hover .block-wrapper:hover .block {
 	border-left: 2px solid #f4645f;
+}
+.use-hover .block-wrapper:hover .drag-handle:hover {
+	opacity: .8;
 }
