@@ -114,6 +114,16 @@
 				this.el.classList.add('use-hover');
 			}
 		});
+
+		// Use hover class instead since :hover behaves odd with Sortable.js
+		Array.prototype.forEach.call(document.getElementsByClassName('block-wrapper'), function(domItem) {
+			domItem.addEventListener('mouseover', function(ev) {
+				domItem.classList.add('hover');
+			}, false);
+			domItem.addEventListener('mouseout', function(ev) {
+				domItem.classList.remove('hover');
+			}, false);
+		});
 	</script>
 </body>
 </html>

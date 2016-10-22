@@ -67,9 +67,12 @@ footer.main {
 .ghost {
 	background: #f4645f;
 }
-.use-hover .block-wrapper:hover .block {
+.panel.features .blocks .ghost .block .text h2 span {
+	color: #f4645f;
+}
+.panel.features .block-wrapper.hover .block {
 	border-left: 2px solid #f4645f;
 }
-.use-hover .block-wrapper:hover .drag-handle:hover {
-	opacity: .8;
+.panel.features .block-wrapper.hover .drag-handle:hover {
+	opacity: .9;
 }
