@@ -1,0 +1,73 @@
+nav.main ul.main-nav {
+	border-left: 0;
+}
+.container {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.panel.features {
+	padding: 50px 0 0;
+}
+.panel.features .blocks .block {
+	padding: 25px;
+	height: auto;
+	border-left: 2px solid #dbdcdb;
+	transition: border-left .2s ease;
+}
+.panel.features .blocks .block .text {
+	padding: 0;
+	width: 80%;
+}
+.panel.features .blocks {
+	max-width: 800px;
+}
+h1 {
+	margin-bottom: 50px;
+}
+footer.main {
+	background-color: #f0f2f1;
+	padding: 50px 0 20px;
+}
+.panel.features .blocks .block .text h2 {
+	margin: 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.panel.features .blocks .block .text h2 span {
+	font-size: 15px;
+	color: #80878c;
+}
+.panel.features .blocks .block-link {
+	display: block;
+}
+.panel.features .blocks .block p {
+	margin-bottom: 0;
+}
+.panel.features .blocks .block .text {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+.drag-handle {
+	position: absolute;
+	left: -50px;
+	top: 50%;
+	opacity: .2;
+	padding: 10px 25px 10px 10px;
+	transition: opacity .2s ease;
+	transform: translateY(-50%);
+	cursor: move;
+}
+.drag-handle:hover {
+	opacity: .8;
+}
+.block-wrapper {
+	position: relative;
+}
+.ghost {
+	background: #f4645f;
+}
+.use-hover .block-wrapper:hover .block {
+	border-left: 2px solid #f4645f;
+}
