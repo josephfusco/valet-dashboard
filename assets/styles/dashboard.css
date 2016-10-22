@@ -73,11 +73,11 @@ footer.main {
 	color: #f4645f;
 }
 .panel.features .block-wrapper.hover .block {
-	box-shadow: 5px 0 0 #f4645f inset;
+	box-shadow: 3px 0 0 #f4645f inset;
 }
 .panel.features .block-wrapper.hover .block .text {
-	-webkit-transform: translateX(5px);
-	transform: translateX(5px);
+	-webkit-transform: translateX(3px);
+	transform: translateX(3px);
 }
 .panel.features .block-wrapper.hover .drag-handle:hover {
 	opacity: .9;
