@@ -5,6 +5,15 @@
  * List Laravel Valet Sites within a parked directory
  */
 
+ $dir              = "../";
+ $ignore           = array( ".", "..", ".DS_Store", "valet-dashboard" );
+ $contents         = scandir( $dir );
+ $sites            = array_diff( $contents, $ignore );
+ $home             = getenv( "HOME" );
+ $valet_data       = file_get_contents( $home . '/.valet/config.json' );
+ $config_json      = json_decode( $valet_data, true );
+ $parked_directory = realpath( __DIR__ . '/..' );
+
 ?>
 
 <!DOCTYPE html>
@@ -22,21 +31,14 @@
 	<main>
 		<article>
 			<h1>Valet Dashboard</h1>
+			<p class="intro"><?php echo $parked_directory; ?></p>
 		</article>
 		<div class="container">
 			<div class="blocks" id="list">
 				<?php
 
-					$dir              = "../";
-					$ignore           = array( ".", "..", ".DS_Store", "valet-dashboard" );
-					$contents         = scandir( $dir );
-					$sites            = array_diff( $contents, $ignore );
-					$home             = getenv( "HOME" );
-					$valet_data       = file_get_contents( $home . '/.valet/config.json' );
-					$config_json      = json_decode( $valet_data, true );
-					$parked_directory = realpath(__DIR__ . '/..');
-
 					if ( empty( $sites ) ) {
+
 				?>
 					<div class="block">
 						<div class="text">

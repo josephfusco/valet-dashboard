@@ -17,15 +17,18 @@ nav.main ul.main-nav {
 }
 .panel.features .blocks .block .text {
 	padding: 0;
-	width: 80%;
+	width: 100%;
+	font-weight: 300;
 	-webkit-transition: -webkit-transform .2s ease;
 	transition: transform .2s ease;
 }
 .panel.features .blocks {
 	max-width: 800px;
 }
-h1 {
-	margin-bottom: 50px;
+.intro {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 footer.main {
 	background-color: #f0f2f1;
@@ -45,7 +48,14 @@ footer.main {
 	display: block;
 }
 .panel.features .blocks .block p {
-	margin-bottom: 0;
+	margin: 0;
+	color: #d2d2d2;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 14px;
+	font-family: monospace;
+	font-weight: 100;
 }
 .panel.features .blocks .block .text {
 	float: none;
